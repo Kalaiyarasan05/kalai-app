@@ -1,6 +1,6 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/damodaranj/my-app.git'
+     git 'https://github.com/Kalaiyarasan05/kalai-app.git'
    }
    stage('Compile-Package'){
 
@@ -24,9 +24,9 @@ node{
    sh 'docker push kalaiyarasanramasamy/myweb:0.0.2'
    }
    stage('Nexus Image Push'){
-   sh "docker login -u admin -p admin123 52.66.236.73:8083"
-   sh "docker tag kalaiyarasanramasamy/myweb:0.0.2 52.66.236.73:8083/damo:1.0.0"
-   sh 'docker push 52.66.236.73:8083/damo:1.0.0'
+   sh "docker login -u admin -p admin123 3.110.165.51:8083"
+   sh "docker tag kalaiyarasanramasamy/myweb:0.0.2 3.110.165.51:8083/kalai:1.0.0"
+   sh 'docker push 3.110.165.51:8083/kalai:1.0.0'
    }
    stage('Remove Previous Container'){
 	try{

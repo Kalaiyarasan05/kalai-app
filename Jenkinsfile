@@ -24,9 +24,9 @@ node{
    sh 'docker push kalaiyarasanramasamy/myweb:0.0.2'
    }
    stage('Nexus Image Push'){
-   sh "docker login -u admin -p admin123 15.207.89.154:8083"
-   sh "docker tag kalaiyarasanramasamy/myweb:0.0.2 15.207.89.154:8083/kalainexusimage:1.0.0"
-   sh 'docker push 15.207.89.154:8083/kalainexusimage:1.0.0'
+   sh "docker login -u admin -p admin123 43.204.110.216:8083"
+   sh "docker tag kalaiyarasanramasamy/myweb:0.0.2 43.204.110.216:8083/kalainexusimage:1.0.0"
+   sh 'docker push 43.204.110.216:8083/kalainexusimage:1.0.0'
    }
    stage('Remove Previous Container'){
 	try{

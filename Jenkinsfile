@@ -1,8 +1,8 @@
 node{
-   stage('SCM Checkout'){
+   stage('Source Code Management Checkout'){
      git 'https://github.com/Kalaiyarasan05/kalai-app.git'
    }
-   stage('Compile-Package'){
+   stage('Compile Package'){
 
       def mvnHome =  tool name: 'maven3', type: 'maven'   
       sh "${mvnHome}/bin/mvn clean package"

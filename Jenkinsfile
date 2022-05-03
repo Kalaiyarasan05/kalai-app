@@ -1,5 +1,5 @@
 node{
-   stage('Source Code Management Checkout'){
+   stage('Source Code Management Checkout - GITHUB'){
      git 'https://github.com/Kalaiyarasan05/kalai-app.git'
    }
    stage('Compile Package'){
